@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd8-T9-7sg">
-                                <rect key="frame" x="96.666666666666686" y="100" width="200" height="100"/>
+                                <rect key="frame" x="96.666666666666686" y="256" width="200" height="100"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="russia"/>
                                 <connections>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ce-kd-ZfB">
-                                <rect key="frame" x="96.666666666666686" y="230" width="200" height="100"/>
+                                <rect key="frame" x="96.666666666666686" y="396" width="200" height="100"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="russia"/>
                                 <connections>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zz1-Zb-rF9">
-                                <rect key="frame" x="96.666666666666686" y="360" width="200" height="100"/>
+                                <rect key="frame" x="96.666666666666686" y="536" width="200" height="100"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="russia"/>
                                 <connections>
@@ -44,12 +44,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Hd8-T9-7sg" secondAttribute="top" constant="3" id="0iQ-D4-b3u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Hd8-T9-7sg" secondAttribute="top" constant="-153" id="0iQ-D4-b3u"/>
                             <constraint firstItem="9Ce-kd-ZfB" firstAttribute="centerX" secondItem="Hd8-T9-7sg" secondAttribute="centerX" id="NCJ-Gk-5j0"/>
                             <constraint firstItem="Hd8-T9-7sg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="buT-mm-O6j"/>
-                            <constraint firstItem="zz1-Zb-rF9" firstAttribute="top" secondItem="9Ce-kd-ZfB" secondAttribute="bottom" constant="30" id="n0E-2h-2bb"/>
+                            <constraint firstItem="zz1-Zb-rF9" firstAttribute="top" secondItem="9Ce-kd-ZfB" secondAttribute="bottom" constant="40" id="n0E-2h-2bb"/>
                             <constraint firstItem="zz1-Zb-rF9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uPV-bO-vJh"/>
-                            <constraint firstItem="9Ce-kd-ZfB" firstAttribute="top" secondItem="Hd8-T9-7sg" secondAttribute="bottom" constant="30" id="zLO-eT-d85"/>
+                            <constraint firstItem="9Ce-kd-ZfB" firstAttribute="top" secondItem="Hd8-T9-7sg" secondAttribute="bottom" constant="40" id="zLO-eT-d85"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a0H-3K-h0Z"/>
@@ -71,6 +71,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fia-0d-ay5">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
