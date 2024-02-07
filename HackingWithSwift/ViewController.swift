@@ -15,6 +15,7 @@ class ViewController: UITableViewController {
         
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedTapped))
         
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -49,6 +50,14 @@ class ViewController: UITableViewController {
             
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    @objc func sharedTapped() {
+        let link = "https://apps.apple.com/ru/app/telegram-messenger/id686449807"
+        let vc = UIActivityViewController(activityItems: [link], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        
+        present(vc, animated: true)
     }
 }
 
