@@ -8,11 +8,14 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
     var countries = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Flags"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         loadImages()
     }
     
@@ -23,8 +26,21 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "flag", for: indexPath)
         cell.textLabel?.text = countries[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "system", size: 16)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vc.selectedImage = countries[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 52
+    }
+    
     
     private func loadImages() {
         let fm = FileManager.default

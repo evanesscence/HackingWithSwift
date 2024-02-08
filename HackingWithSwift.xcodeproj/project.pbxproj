@@ -19,6 +19,7 @@
 		9A12394E2B74D36200430F92 /* estonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1239422B74D36200430F92 /* estonia.png */; };
 		9A12394F2B74D36200430F92 /* nigeria.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1239432B74D36200430F92 /* nigeria.png */; };
 		9A1239502B74D36200430F92 /* poland.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1239442B74D36200430F92 /* poland.png */; };
+		9A3419402B7541110037C2BA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34193F2B7541110037C2BA /* DetailViewController.swift */; };
 		9AE8B10F2B6A242D00CDA18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8B10E2B6A242D00CDA18D /* AppDelegate.swift */; };
 		9AE8B1112B6A242D00CDA18D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8B1102B6A242D00CDA18D /* SceneDelegate.swift */; };
 		9AE8B1132B6A242D00CDA18D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8B1122B6A242D00CDA18D /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		9A1239422B74D36200430F92 /* estonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estonia.png; sourceTree = "<group>"; };
 		9A1239432B74D36200430F92 /* nigeria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nigeria.png; sourceTree = "<group>"; };
 		9A1239442B74D36200430F92 /* poland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poland.png; sourceTree = "<group>"; };
+		9A34193F2B7541110037C2BA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9AE8B10B2B6A242D00CDA18D /* HackingWithSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingWithSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8B10E2B6A242D00CDA18D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE8B1102B6A242D00CDA18D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				9AE8B1172B6A242D00CDA18D /* Assets.xcassets */,
 				9AE8B1192B6A242D00CDA18D /* LaunchScreen.storyboard */,
 				9AE8B11C2B6A242D00CDA18D /* Info.plist */,
+				9A34193F2B7541110037C2BA /* DetailViewController.swift */,
 			);
 			path = HackingWithSwift;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				9AE8B1132B6A242D00CDA18D /* ViewController.swift in Sources */,
 				9AE8B10F2B6A242D00CDA18D /* AppDelegate.swift in Sources */,
 				9AE8B1112B6A242D00CDA18D /* SceneDelegate.swift in Sources */,
+				9A3419402B7541110037C2BA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
