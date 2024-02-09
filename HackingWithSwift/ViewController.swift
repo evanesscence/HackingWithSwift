@@ -27,6 +27,12 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "flag", for: indexPath)
         cell.textLabel?.text = countries[indexPath.row]
         cell.textLabel?.font = UIFont(name: "system", size: 16)
+        
+        cell.imageView?.layer.borderWidth = 2
+        cell.imageView?.layer.borderColor = UIColor.black.cgColor
+        cell.imageView?.image = UIImage(named: countries[indexPath.row])
+        cell.imageView?.frame = CGRectOffset(cell.frame, 100, 100);
+
         return cell
     }
     
@@ -40,7 +46,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 52
     }
-    
     
     private func loadImages() {
         let fm = FileManager.default
