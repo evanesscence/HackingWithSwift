@@ -48,18 +48,33 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TzA-hP-FK3">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6p-Oq-bKd">
+                                <rect key="frame" x="81" y="753" width="231" height="41"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Посмотреть цитату">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showQuote:" destination="wgf-vR-JYE" eventType="touchUpInside" id="Krj-aA-kEw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kAe-dL-Q9w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TzA-hP-FK3" firstAttribute="centerY" secondItem="QUQ-Oc-VFF" secondAttribute="centerY" id="3vj-e1-wh4"/>
-                            <constraint firstItem="TzA-hP-FK3" firstAttribute="leading" secondItem="kAe-dL-Q9w" secondAttribute="leading" id="Hyh-ME-mEH"/>
-                            <constraint firstItem="TzA-hP-FK3" firstAttribute="centerX" secondItem="QUQ-Oc-VFF" secondAttribute="centerX" id="OCv-tw-4hU"/>
-                            <constraint firstItem="TzA-hP-FK3" firstAttribute="top" secondItem="QUQ-Oc-VFF" secondAttribute="topMargin" constant="-59" id="pcD-ub-K4a"/>
+                            <constraint firstItem="TzA-hP-FK3" firstAttribute="centerY" secondItem="QUQ-Oc-VFF" secondAttribute="centerY" id="Amz-4m-MCC"/>
+                            <constraint firstItem="W6p-Oq-bKd" firstAttribute="top" secondItem="kAe-dL-Q9w" secondAttribute="top" constant="694" id="B7q-eI-2vs"/>
+                            <constraint firstItem="TzA-hP-FK3" firstAttribute="leading" secondItem="kAe-dL-Q9w" secondAttribute="leading" id="Na5-cZ-ORl"/>
+                            <constraint firstItem="W6p-Oq-bKd" firstAttribute="leading" secondItem="kAe-dL-Q9w" secondAttribute="leading" constant="81" id="O5H-Kq-beH"/>
+                            <constraint firstItem="TzA-hP-FK3" firstAttribute="centerX" secondItem="QUQ-Oc-VFF" secondAttribute="centerX" id="Rdc-Y6-biI"/>
+                            <constraint firstItem="TzA-hP-FK3" firstAttribute="centerX" secondItem="W6p-Oq-bKd" secondAttribute="centerX" id="fmC-AF-Iif"/>
+                            <constraint firstItem="TzA-hP-FK3" firstAttribute="top" secondItem="QUQ-Oc-VFF" secondAttribute="topMargin" constant="-59" id="quA-Ci-x5h"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="TzA-hP-FK3" id="yN3-km-Tot"/>
+                        <outlet property="quoteButton" destination="W6p-Oq-bKd" id="ETl-MR-HIF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhs-ka-tUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,6 +101,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
