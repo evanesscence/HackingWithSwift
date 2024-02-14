@@ -20,6 +20,9 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "main") as? ViewController {
+            vc.website = websites[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
