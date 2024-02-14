@@ -5,8 +5,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
     var website: String?
+    var websites = ["hackingwithswift.com", "youtube.com"]
     
     override func loadView() {
+        navigationItem.largeTitleDisplayMode = .never
+        
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
@@ -38,7 +41,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     @objc func openTapped() {
         let ac = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
+        
+        for website in websites {
+            ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
+        }
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
@@ -64,10 +70,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let url = navigationAction.request.url
         
-        if let host = url?.host, let website = website {
-            if host.contains(website) {
-                decisionHandler(.allow)
-                return
+        if let host = url?.host {
+            for website in websites {
+                if host.contains(website) {
+                    decisionHandler(.allow)
+                    return
+                }
             }
             
             showErrorAlert()
